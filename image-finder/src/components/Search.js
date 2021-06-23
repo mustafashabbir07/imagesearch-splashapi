@@ -19,9 +19,9 @@ class Search extends Component
         return(
             <div>
                 <form onSubmit={this.onFormSubmit} className= "flexContainer">
-                   <label htmlFor="search"><h2>Image Search</h2></label>
+                   <label className="lbl_img" htmlFor="search"><h2 className="h2_img">Image Search</h2></label>
                     <input className="inputStyle" value={this.state.val} onChange={this.onInputChange} type="text"/>
-
+                    <button type="submit">Enter</button>
                 </form>
 
             </div>

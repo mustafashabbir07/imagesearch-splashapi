@@ -2,10 +2,14 @@ import axios from 'axios';
 import React from 'react';
 import Search from './Search';
 import  ImageList from './ImageList';
+import './SearchStyle.css'
+
 //
 class App extends React.Component
 {
     state = {images:[]}
+   
+  
 
     onSearchSubmit= async (term) =>
     {
@@ -24,7 +28,7 @@ class App extends React.Component
         return(
             <div>
                 <Search userSubmit={this.onSearchSubmit} />
-                <span>Found: {this.state.images.length} images</span>
+                <span className="found_span">Found: {this.state.images.length} images</span>
                 <ImageList foundImages={this.state.images}/>
             </div>
         )
